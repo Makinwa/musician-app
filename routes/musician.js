@@ -10,6 +10,14 @@ router.get('/health', (req, res) => {
 });
 
 // retrieve all musicians from data store
+router.get('/h', (req, res) => {
+  
+    res.status('200').send("Server is up and running");
+  });
+
+
+
+// retrieve all musicians from data store
 router.get('/all', (req, res) => {
   const { musician } = req.app.locals;
   musician.getMusicians(req.params.id, (err, returnedMusicians) => {
